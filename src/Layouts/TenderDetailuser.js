@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 import { Table, Modal, Button } from 'react-bootstrap';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { ProgressBar } from 'react-bootstrap'; // import ProgressBar from react-bootstrap
-import { baseurl } from "../api";
+import { baseurl, fixDocUrl } from "../api";
 import { getPredefinedUrl, triggerFunction } from "../Admin/SignedUrl";
 
 

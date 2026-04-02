@@ -32,7 +32,7 @@ import { Table, TableBody, TableCell, TableContainer, TablePagination, TableHead
 import Menu from '@material-ui/core/Menu';
 // import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { baseurl } from "../api";
+import { baseurl, fixDocUrl } from "../api";
 
 
 // import axios from "axios";
@@ -672,7 +672,7 @@ function TenderForm() {
                         <Button
                           variant="contained"
                           color="primary"
-                          onClick={() => window.open(item.doc, "_blank")}
+                          onClick={() => window.open(fixDocUrl(item.doc), "_blank")}
                         >
                           View
                         </Button>

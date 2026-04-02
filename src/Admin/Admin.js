@@ -20,7 +20,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
 import { Modal, Button, TextField } from '@material-ui/core';
-import { baseurl } from "../api";
+import { baseurl, fixDocUrl } from "../api";
 
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -476,7 +476,7 @@ export default function Dashboard() {
                                                     <Button
                                                         variant="contained"
                                                         color="primary"
-                                                        onClick={() => window.open(item.doc, "_blank")}
+                                                        onClick={() => window.open(fixDocUrl(item.doc), "_blank")}
                                                     >
                                                         View
                                                     </Button>

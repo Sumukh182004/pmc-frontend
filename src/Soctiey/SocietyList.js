@@ -40,7 +40,7 @@ import { useDropzone } from 'react-dropzone';
 import Adminheader from "../Admin/Adminheader";
 import SocietyHeader from './SocietyHeader';
 import Bidder from './Bidder';
-import { baseurl } from "../api";
+import { baseurl, fixDocUrl } from "../api";
 
 const drawerWidth = 240;
 
@@ -266,7 +266,7 @@ export default function SocietyList() {
                         <Button
                           variant="contained"
                           color="primary"
-                          onClick={() => window.open(item.doc, "_blank")}
+                          onClick={() => window.open(fixDocUrl(item.doc), "_blank")}
                         >
                           View
                         </Button>

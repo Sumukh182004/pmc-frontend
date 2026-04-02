@@ -7,4 +7,9 @@
 
 const baseurl="https://pmcbe.vercel.app"
 
-export { baseurl }
+const fixDocUrl = (url) => {
+    if (!url) return url;
+    return url.replace('dcpr1.s3.ap-south-1.amazonaws.com', 'pmctender.s3.ap-south-1.amazonaws.com');
+};
+
+export { baseurl, fixDocUrl }
