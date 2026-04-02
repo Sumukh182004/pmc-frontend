@@ -5,6 +5,6 @@
 
 // const baseurl="https://dv77uchjy2.execute-api.ap-south-1.amazonaws.com/prod"
 
-const baseurl="http://localhost:8000"
+const baseurl="https://pmcbe.vercel.app"
 
 export { baseurl }

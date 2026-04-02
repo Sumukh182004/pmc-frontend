@@ -36,7 +36,7 @@ else{
   key1=`/${extension}`
 }
 try {
-  const response = await axios.post("http://localhost:4000/gsu", {
+  const response = await axios.post("https://s3service.vercel.app/gsu", {
     bucket: bucketName,
     key1,
     Expires: 300,
