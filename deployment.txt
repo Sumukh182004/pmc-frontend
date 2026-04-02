@@ -1,0 +1,10 @@
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 195275675206.dkr.ecr.ap-south-1.amazonaws.com
+docker build -t tender .
+docker tag tender:latest 195275675206.dkr.ecr.ap-south-1.amazonaws.com/tender:latest
+docker push 195275675206.dkr.ecr.ap-south-1.amazonaws.com/tender:latest
+arn:aws:lambda:ap-south-1:195275675206:function:pmc_tender
+
+aws lambda update-function-code --function-name arn:aws:lambda:ap-south-1:195275675206:function:pmc_tender --image-uri 195275675206.dkr.ecr.ap-south-1.amazonaws.com/tender:latest --region ap-south-1
+
+
+
