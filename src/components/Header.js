@@ -68,10 +68,14 @@ function Header() {
       }
     } catch (error) {
       console.error(error);
+      const data = error.response?.data;
+      const backendMsg = data?.error
+        ? `${data.message}: ${data.error}`
+        : data?.message || error.message;
       Swal.fire({
         icon: "error",
         title: "An error occurred",
-        text: error.message,
+        text: backendMsg,
         showConfirmButton: true
       });
     }
